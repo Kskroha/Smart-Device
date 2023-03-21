@@ -241,7 +241,7 @@
   }
 }
 
-.modal__button-wrap label span {
+.modal__button-wrap span {
   position: absolute;
   top: 0;
   left: 9px;
@@ -251,7 +251,7 @@
   border-radius: 2px;
 }
 
-.modal__button-wrap label input + span::before {
+.modal__button-wrap input + span::before {
   display: none;
   position: absolute;
   content: "";
@@ -264,7 +264,7 @@
   background-size: contain;
 }
 
-.modal__button-wrap label input:checked + span::before {
+.modal__button-wrap input:checked + span::before {
   display: block;
 }
 
