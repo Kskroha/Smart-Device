@@ -1,0 +1,30 @@
+@import "mixins";
+@import "variables";
+
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-self: flex-start;
+
+  @include vp-1023 {
+    align-self: unset;
+    padding-left: 0;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.social__link svg use {
+  color: $color-black-perl-blue;
+}

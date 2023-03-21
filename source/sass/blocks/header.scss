@@ -1,0 +1,142 @@
+@import "mixins";
+@import "variables";
+
+.header {
+  background-image: $blackperl-to-bottom;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+
+  @include vp-1023 {
+    position: absolute;
+  }
+}
+
+.header__container {
+  padding-top: 28px;
+  padding-bottom: 35px;
+  display: flex;
+  align-items: center;
+
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include vp-767 {
+    padding-top: 13px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-right: 145px;
+
+  @include vp-1023 {
+    margin-right: 0;
+    padding-top: 5px;
+    padding-right: 20px;
+  }
+
+  @include vp-767 {
+    padding-right: 9px;
+  }
+}
+
+.header__button {
+  text-align: left;
+  min-width: 225px;
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px 20px;
+  background-color: $color-transparent;
+  border: none;
+  font-family: $ff-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-alice-blue;
+  cursor: pointer;
+
+  @include vp-1023 {
+    min-width: auto;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.header__button--phone {
+  background-image: url("../img/svg/phone.svg");
+}
+
+.header__button--email {
+  background-image: url("../img/svg/mail.svg");
+}
+
+.header__call-me {
+  background-color: $color-transparent;
+  padding: 10px 16px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $color-alice-blue;
+  text-transform: uppercase;
+  border: 1px solid $color-alice-blue;
+  border-radius: 3px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-default-white;
+    color: $color-black-perl-blue;
+  }
+}
+
+.header__span {
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.header__logo-link {
+  display: block;
+  margin-right: 160px;
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.header__logo {
+  min-width: 215px;
+  min-height: 55px;
+
+  @include vp-767 {
+    min-width: 35px;
+    min-height: 35px;
+  }
+}
