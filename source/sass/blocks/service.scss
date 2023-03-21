@@ -1,0 +1,227 @@
+@import "mixins";
+@import "variables";
+
+.service {
+  padding-top: 65px;
+  padding-bottom: 142px;
+  background-color: $color-black-perl-blue;
+
+  @include vp-1023 {
+    padding-top: 56px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 85px;
+  }
+}
+
+.service__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 650px;
+  column-gap: 85px;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 30px;
+    column-gap: 0;
+  }
+}
+
+.service h2 {
+  margin: 0;
+  margin-bottom: 52px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: $ff-roboto-condensed;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 37px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 30px;
+  }
+}
+
+.service__item h3 {
+  margin: 0;
+  padding-right: 40px;
+  color: $color-default-white;
+  font-family: $ff-roboto-condensed;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 230px;
+
+  @include vp-1023 {
+    max-width: 190px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 175px;
+  }
+}
+
+.service__item {
+  position: relative;
+  padding: 48px 0 0 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $color-black-perl-blue;
+
+  @include vp-1023 {
+    min-height: 250px;
+    padding: 38px 0 0 44px;
+  }
+
+  @include vp-767 {
+    padding: 25px 0 0 30px;
+  }
+
+  &:hover {
+    box-shadow: 1px 2px 17px 4px rgba(0, 178, 255, 0.5);
+  }
+}
+
+.service__item--first {
+  background-image: url("../img/service1-d.jpg");
+
+  @include vp-1024 {
+    background-image: url("../img/service1-d.jpg");
+
+    @include retina {
+      background-image: url("../img/service1-d@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/service1-t.jpg");
+
+    @include retina {
+      background-image: url("../img/service1-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/service1-m.jpg");
+
+    @include retina {
+      background-image: url("../img/service1-m@2x.jpg");
+    }
+  }
+}
+
+.service__item--second {
+  background-image: url("../img/service2-d.jpg");
+
+  @include vp-1024 {
+    background-image: url("../img/service2-d.jpg");
+
+    @include retina {
+      background-image: url("../img/service2-d@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/service2-t.jpg");
+
+    @include retina {
+      background-image: url("../img/service2-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/service2-m.jpg");
+
+    @include retina {
+      background-image: url("../img/service2-m@2x.jpg");
+    }
+  }
+}
+
+.service__item--third {
+  background-image: url("../img/service3-d.jpg");
+
+  @include vp-1024 {
+    background-image: url("../img/service3-d.jpg");
+
+    @include retina {
+      background-image: url("../img/service3-d@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/service3-t.jpg");
+
+    @include retina {
+      background-image: url("../img/service3-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/service3-m.jpg");
+
+    @include retina {
+      background-image: url("../img/service3-m@2x.jpg");
+    }
+  }
+}
+
+.service__button {
+  align-self: flex-end;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px 0 0 0;
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.service__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service__desktop {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.service__mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    max-width: 250px;
+  }
+}

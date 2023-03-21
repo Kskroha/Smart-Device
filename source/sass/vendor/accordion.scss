@@ -1,0 +1,116 @@
+@import "variables";
+@import "mixins";
+
+.accordion {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    margin: 0 auto 35px auto;
+  }
+
+  & & {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element:nth-child(2n) {
+    &::before {
+      height: 0;
+    }
+  }
+
+  &__element {
+    width: 100%;
+    position: relative;
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 1000%;
+      height: 1px;
+      background-color: $color-alice-blue;
+      transform: translateX(-50%);
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 1000%;
+      height: 1px;
+      background-color: $color-alice-blue;
+      transform: translateX(-50%);
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__element.is-active {
+    padding-bottom: 20px;
+  }
+
+  &__element.is-active .accordion__button::after {
+    display: none;
+  }
+
+  &__button {
+    @include vp-767 {
+      position: relative;
+      width: 100%;
+      padding: 20px 0;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    &::before {
+      display: none;
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 0;
+      width: 15px;
+      height: 1px;
+      background-color: $color-default-white;
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+
+    &::after {
+      display: none;
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 0;
+      width: 15px;
+      height: 1px;
+      background-color: $color-default-white;
+      transform: rotate(90deg);
+
+      @include vp-767 {
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 10px;
+  }
+}

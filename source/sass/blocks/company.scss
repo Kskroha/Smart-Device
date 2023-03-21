@@ -1,0 +1,126 @@
+@import "mixins";
+@import "variables";
+
+.company {
+  margin-bottom: 102px;
+
+  @include vp-1023 {
+    margin-bottom: 60px;
+  }
+}
+
+.company__content {
+  padding-left: 250px;
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url("../img/2022.png");
+
+  @include vp-1024 {
+    background-image: url("../img/2022.png");
+
+    @include retina {
+      background-image: url("../img/2022@2x.png");
+      background-size: 150px;
+    }
+  }
+
+  @include vp-1023 {
+    padding-left: 175px;
+    background-position: left -4px top 5px;
+
+    @include retina {
+      background-image: url("../img/2022@2x.png");
+      background-size: 150px;
+    }
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    background-image: none;
+  }
+}
+
+.company__content h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: $ff-roboto-condensed;
+  color: $color-default-black;
+
+  @include vp-1023 {
+    margin-bottom: 12px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.company__content p {
+  margin: 0;
+  margin-bottom: 19px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $ff-pt-mono;
+
+  @include vp-1023 {
+    margin-bottom: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 15px;
+  }
+}
+
+.company__content p:last-child {
+  margin-bottom: 0;
+}
+
+.company__hidden {
+  display: none;
+}
+
+.company__button {
+  margin-top: 20px;
+  padding: 13px 50px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-deep-sky-blue;
+  border: 1px solid $color-deep-sky-blue;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    padding: 9px 40px;
+  }
+
+  &:hover {
+    color: $color-alice-blue;
+    background-color: $color-deep-sky-blue;
+  }
+}
+
+.company__mobile-hidden {
+  display: block;
+
+  @include vp-767 {
+    display: none;
+  }
+}

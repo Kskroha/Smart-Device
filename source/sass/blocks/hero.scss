@@ -1,0 +1,151 @@
+@import "mixins";
+@import "variables";
+
+.hero {
+  background-color: $color-black-perl-blue;
+  background-image: url("../img/hero-d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include vp-1024 {
+    background-image: url("../img/hero-d.jpg");
+
+    @include retina {
+      background-image: url("../img/hero-d@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/hero-t.jpg");
+
+    @include retina {
+      background-image: url("../img/hero-t@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/hero-m.jpg");
+
+    @include retina {
+      background-image: url("../img/hero-m@2x.jpg");
+    }
+  }
+}
+
+.hero__text {
+  padding: 305px 0 280px 125px;
+
+  @include vp-1023 {
+    padding: 180px 0 206px;
+  }
+
+  @include vp-767 {
+    padding: 150px 0 191px;
+  }
+}
+
+.hero__text h2 {
+  margin: 0;
+  display: block;
+  margin-bottom: 30px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  color: $color-alice-blue;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 1px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 7px;
+  }
+}
+
+.hero__text p {
+  margin: 0;
+  margin-bottom: 50px;
+  font-family: $ff-pt-mono;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: $color-alice-blue;
+  max-width: 685px;
+
+  @include vp-1023 {
+    margin-bottom: 57px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 45px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.hero__button {
+  padding: 15px 30px;
+  font-family: $ff-roboto-condensed;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-alice-blue;
+  background-color: $color-deep-sky-blue;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    padding: 16px 30px;
+    margin-left: 44px;
+  }
+
+  @include vp-767 {
+    padding: 12px 52px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 0;
+  }
+
+  &:hover {
+    color: $color-deep-sky-blue;
+    background-color: $color-alice-blue;
+  }
+}
+
+.hero__button span {
+  letter-spacing: 0.05em;
+  margin: 0;
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__button span:last-child {
+  display: none;
+  margin: 0;
+
+  @include vp-767 {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

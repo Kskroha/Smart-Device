@@ -4,7 +4,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 2500;
 
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@
     min-height: 100%;
     padding: 60px 40px;
 
-    @include vp-767 {
+    @include vp-374 {
       padding: 60px 16px;
     }
   }
@@ -57,14 +57,13 @@
   }
 
   &__content {
+    background-color: $color-deep-sky-blue;
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
-
-    @include vp-767 {
+    @include vp-374 {
       width: 100%;
       padding: 20px;
     }
@@ -72,9 +71,9 @@
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
-    z-index: 1;
+    top: 15px;
+    right: 15px;
+    z-index: 3000;
 
     width: 40px;
     height: 40px;
@@ -95,7 +94,7 @@
     .modal__content {
       width: auto;
 
-      @include vp-767 {
+      @include vp-374 {
         width: 100%;
       }
     }
@@ -116,4 +115,163 @@
 
     pointer-events: auto;
   }
+}
+
+.modal span {
+  margin: 0;
+  margin-bottom: 12px;
+  margin-left: -5px;
+  font-family: $ff-roboto-condensed;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-default-white;
+}
+
+.modal p {
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: $ff-pt-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+}
+
+.modal__field-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.modal__field-wrap input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 15px 0 13px 15px;
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  font-family: $ff-pt-mono;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.modal__field-wrap input:last-child {
+  margin-bottom: 0;
+}
+
+.modal__field-wrap input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  font-family: $ff-pt-mono;
+}
+
+.modal form textarea {
+  margin-bottom: 25px;
+  width: 100%;
+  padding: 23px 0 22px 15px;
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  font-family: $ff-pt-mono;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.modal form textarea::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  font-family: $ff-pt-mono;
+}
+
+.modal__button {
+  width: 100%;
+  padding: 12px 25px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $ff-roboto-condensed;
+  color: $color-default-white;
+  background-color: $color-default-black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-default-black;
+    background-color: $color-default-white;
+  }
+}
+
+.modal__button-wrap label {
+  position: relative;
+  padding-left: 29px;
+  font-family: $ff-pt-mono;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  cursor: pointer;
+
+  &:focus-within {
+    outline: 1px solid #026693;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.modal__button-wrap label span {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+}
+
+.modal__button-wrap label input + span::before {
+  display: none;
+  position: absolute;
+  content: "";
+  top: 28%;
+  left: 2px;
+  width: 12px;
+  height: 6px;
+  background-image: url("../img/svg/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal__button-wrap label input:checked + span::before {
+  display: block;
+}
+
+.modal__close-btn use {
+  color: $color-default-white;
+}
+
+.modal__close-btn:hover use {
+  color: $color-default-black;
 }

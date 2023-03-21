@@ -2,6 +2,9 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/accordion";
+@import "vendor/data-accordion";
+@import "vendor/phone-mask";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -17,12 +20,16 @@
 
 // Blocks
 // ---------------------------------
-
-@import "blocks/btn";
 @import "blocks/modal";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/hero";
+@import "blocks/advantages";
+@import "blocks/company";
+@import "blocks/service";
+@import "blocks/contact";
+@import "blocks/footer";
+@import "blocks/social";
 
 // ---------------------------------
 
