@@ -88,6 +88,9 @@
 }
 
 .hero__button {
+  text-decoration: none;
+  display: block;
+  width: fit-content;
   padding: 15px 30px;
   font-family: $ff-roboto-condensed;
   font-size: 18px;
