@@ -1195,7 +1195,7 @@ button,
 
 .hero {
   background-color: #041827;
-  background-image: url("../img/hero-d.jpg");
+  background-image: url("../img/hero-d.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1343,7 +1343,7 @@ button,
   padding-bottom: 20px;
   background-repeat: no-repeat;
   background-position: left top;
-  background-image: url("../img/2022.png");
+  background-image: url("../img/2022.webp");
 }
 
 .company__content h2 {
@@ -1466,15 +1466,15 @@ button,
 }
 
 .service__item--first {
-  background-image: url("../img/service1-d.jpg");
+  background-image: url("../img/service1-d.webp");
 }
 
 .service__item--second {
-  background-image: url("../img/service2-d.jpg");
+  background-image: url("../img/service2-d.webp");
 }
 
 .service__item--third {
-  background-image: url("../img/service3-d.jpg");
+  background-image: url("../img/service3-d.webp");
 }
 
 .service__button {
@@ -1543,7 +1543,7 @@ button,
   padding-left: 625px;
   background-repeat: no-repeat;
   background-position: left top 57%;
-  background-image: url("../img/paper-airplane.png");
+  background-image: url("../img/paper-airplane.webp");
 }
 
 .contact__form-wrap h2 {
@@ -1994,46 +1994,46 @@ button,
 
 @media (min-width: 1024px) {
   .hero {
-    background-image: url("../img/hero-d.jpg");
+    background-image: url("../img/hero-d.webp");
   }
 
   .company__content {
-    background-image: url("../img/2022.png");
+    background-image: url("../img/2022.webp");
   }
 
   .service__item--first {
-    background-image: url("../img/service1-d.jpg");
+    background-image: url("../img/service1-d.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-d.jpg");
+    background-image: url("../img/service2-d.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-d.jpg");
+    background-image: url("../img/service3-d.webp");
   }
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../img/hero-d@2x.jpg");
+    background-image: url("../img/hero-d@2x.webp");
   }
 
   .company__content {
-    background-image: url("../img/2022@2x.png");
+    background-image: url("../img/2022@2x.webp");
     background-size: 150px;
   }
 
   .service__item--first {
-    background-image: url("../img/service1-d@2x.jpg");
+    background-image: url("../img/service1-d@2x.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-d@2x.jpg");
+    background-image: url("../img/service2-d@2x.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-d@2x.jpg");
+    background-image: url("../img/service3-d@2x.webp");
   }
 }
 
@@ -2080,7 +2080,7 @@ button,
   }
 
   .hero {
-    background-image: url("../img/hero-t.jpg");
+    background-image: url("../img/hero-t.webp");
   }
 
   .hero__text {
@@ -2189,15 +2189,15 @@ button,
   }
 
   .service__item--first {
-    background-image: url("../img/service1-t.jpg");
+    background-image: url("../img/service1-t.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-t.jpg");
+    background-image: url("../img/service2-t.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-t.jpg");
+    background-image: url("../img/service3-t.webp");
   }
 
   .contact {
@@ -2315,24 +2315,24 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../img/hero-t@2x.jpg");
+    background-image: url("../img/hero-t@2x.webp");
   }
 
   .company__content {
-    background-image: url("../img/2022@2x.png");
+    background-image: url("../img/2022@2x.webp");
     background-size: 150px;
   }
 
   .service__item--first {
-    background-image: url("../img/service1-t@2x.jpg");
+    background-image: url("../img/service1-t@2x.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-t@2x.jpg");
+    background-image: url("../img/service2-t@2x.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-t@2x.jpg");
+    background-image: url("../img/service3-t@2x.webp");
   }
 }
 
@@ -2393,7 +2393,7 @@ button,
   }
 
   .hero {
-    background-image: url("../img/hero-m.jpg");
+    background-image: url("../img/hero-m.webp");
   }
 
   .hero__text {
@@ -2508,15 +2508,15 @@ button,
   }
 
   .service__item--first {
-    background-image: url("../img/service1-m.jpg");
+    background-image: url("../img/service1-m.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-m.jpg");
+    background-image: url("../img/service2-m.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-m.jpg");
+    background-image: url("../img/service3-m.webp");
   }
 
   .service__button {
@@ -2633,19 +2633,19 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../img/hero-m@2x.jpg");
+    background-image: url("../img/hero-m@2x.webp");
   }
 
   .service__item--first {
-    background-image: url("../img/service1-m@2x.jpg");
+    background-image: url("../img/service1-m@2x.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-m@2x.jpg");
+    background-image: url("../img/service2-m@2x.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-m@2x.jpg");
+    background-image: url("../img/service3-m@2x.webp");
   }
 }
 

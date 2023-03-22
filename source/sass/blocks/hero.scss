@@ -1,30 +1,30 @@
 .hero {
   background-color: $color-black-perl-blue;
-  background-image: url("../img/hero-d.jpg");
+  background-image: url("../img/hero-d.webp");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include vp-1024 {
-    background-image: url("../img/hero-d.jpg");
+    background-image: url("../img/hero-d.webp");
 
     @include retina {
-      background-image: url("../img/hero-d@2x.jpg");
+      background-image: url("../img/hero-d@2x.webp");
     }
   }
 
   @include vp-1023 {
-    background-image: url("../img/hero-t.jpg");
+    background-image: url("../img/hero-t.webp");
 
     @include retina {
-      background-image: url("../img/hero-t@2x.jpg");
+      background-image: url("../img/hero-t@2x.webp");
     }
   }
 
   @include vp-767 {
-    background-image: url("../img/hero-m.jpg");
+    background-image: url("../img/hero-m.webp");
 
     @include retina {
-      background-image: url("../img/hero-m@2x.jpg");
+      background-image: url("../img/hero-m@2x.webp");
     }
   }
 }
