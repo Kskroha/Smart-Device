@@ -47,6 +47,7 @@
   position: relative;
   min-height: 300px;
   border: 1px solid $color-whisper;
+  color: $color-deep-sky-blue;
 
   &:hover {
     background-color: $color-deep-sky-blue;
@@ -57,8 +58,8 @@
     color: $color-alice-blue;
   }
 
-  &:hover path {
-    fill: $color-alice-blue;
+  &:hover svg {
+    color: $color-alice-blue;
   }
 
   @include vp-1023 {

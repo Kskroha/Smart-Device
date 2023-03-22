@@ -268,10 +268,10 @@
   display: block;
 }
 
-.modal__close-btn use {
+.modal__close-btn svg {
   color: $color-default-white;
 }
 
-.modal__close-btn:hover use {
+.modal__close-btn:hover svg {
   color: $color-default-black;
 }
