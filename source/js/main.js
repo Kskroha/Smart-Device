@@ -30,7 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
     mainForm.scrollIntoView({behavior: 'smooth'});
   });
 
-  showMoreBtn.addEventListener('click', () => {
+  showMoreBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
     if (isTextShown === false) {
       hiddenText.classList.remove('company__hidden');
       mobileHiddenText.classList.remove('company__mobile-hidden');

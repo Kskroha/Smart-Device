@@ -1374,7 +1374,12 @@ button,
 }
 
 .company__button {
-  margin-top: 20px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 40px;
   padding: 13px 50px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;

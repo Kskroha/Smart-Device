@@ -30,7 +30,7 @@
             aria-label="Наш телефон: +74950005252"><span class="header__span">+7 (495) 000 52
               52</span></a>
         </div>
-        <button class="header__call-me" data-open-modal="request-call">Заказать звонок</button>
+        <button class="header__call-me" type="button" data-open-modal="request-call">Заказать звонок</button>
       </div>
     </header>
     <main class="main">
@@ -40,7 +40,7 @@
           <div class="hero__text">
             <h2>Печатные платы</h2>
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <button class="hero__button"><span class="hero__btn-desktop">Получить бесплатную консультацию</span>
+            <button class="hero__button" type="button"><span class="hero__btn-desktop">Получить бесплатную консультацию</span>
               <span class="hero__btn-mobile">Бесплатная консультация</span></button>
           </div>
         </div>
@@ -162,7 +162,7 @@
               внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших
               клиентов.
             </p>
-            <button class="company__button">Подробнее</button>
+            <a href="#" class="company__button">Подробнее</a>
           </div>
         </div>
       </section>
@@ -213,9 +213,9 @@
                 <label class="visually-hidden" for="phone">Номер телефона</label>
                 <input tabindex="1" type="tel" name="phone" id="phone" placeholder="Телефон" required>
               </div>
-              <textarea tabindex="1" placeholder="Ваш вопрос" rows="5"></textarea>
+              <textarea tabindex="1" placeholder="Ваш вопрос" rows="5" name="question"></textarea>
               <div class="contact__button-wrap">
-                <button tabindex="3" class="contact__button">Задать вопрос</button>
+                <button tabindex="3" class="contact__button" type="submit">Задать вопрос</button>
                 <label for="agree">Я&nbsp;согласен на&nbsp;обработку персональных данных
                   <input class="visually-hidden" tabindex="2" id="agree" type="checkbox" checked>
                   <span></span>
@@ -324,7 +324,7 @@
             <label class="visually-hidden" for="modal-phone">Номер телефона</label>
             <input tabindex="4" type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
           </div>
-          <textarea tabindex="4" placeholder="Ваш вопрос" rows="5"></textarea>
+          <textarea tabindex="4" placeholder="Ваш вопрос" rows="5" name="modal-question"></textarea>
           <div class="modal__button-wrap">
             <button tabindex="6" class="modal__button" type="submit">Отправить</button>
             <label for="modal-agree">Я&nbsp;согласен на&nbsp;обработку персональных данных

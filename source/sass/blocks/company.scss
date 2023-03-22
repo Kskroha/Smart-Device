@@ -85,7 +85,10 @@
 }
 
 .company__button {
-  margin-top: 20px;
+  display: block;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 40px;
   padding: 13px 50px;
   font-family: $ff-roboto-condensed;
   font-weight: 700;
