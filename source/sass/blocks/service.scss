@@ -1,6 +1,3 @@
-@import "mixins";
-@import "variables";
-
 .service {
   padding-top: 65px;
   padding-bottom: 142px;
@@ -23,8 +20,8 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 650px;
-  column-gap: 85px;
+  grid-template-rows: auto;
+  gap: 85px;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
@@ -77,6 +74,7 @@
 }
 
 .service__item {
+  min-height: 650px;
   position: relative;
   padding: 48px 0 0 40px;
   background-repeat: no-repeat;
@@ -84,7 +82,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $color-black-perl-blue;
+  background-color: $color-cerulean;
 
   @include vp-1023 {
     min-height: 250px;
@@ -101,85 +99,85 @@
 }
 
 .service__item--first {
-  background-image: url("../img/service1-d.jpg");
+  background-image: url("../img/service1-d.webp");
 
   @include vp-1024 {
-    background-image: url("../img/service1-d.jpg");
+    background-image: url("../img/service1-d.webp");
 
     @include retina {
-      background-image: url("../img/service1-d@2x.jpg");
+      background-image: url("../img/service1-d@2x.webp");
     }
   }
 
   @include vp-1023 {
-    background-image: url("../img/service1-t.jpg");
+    background-image: url("../img/service1-t.webp");
 
     @include retina {
-      background-image: url("../img/service1-t@2x.jpg");
+      background-image: url("../img/service1-t@2x.webp");
     }
   }
 
   @include vp-767 {
-    background-image: url("../img/service1-m.jpg");
+    background-image: url("../img/service1-m.webp");
 
     @include retina {
-      background-image: url("../img/service1-m@2x.jpg");
+      background-image: url("../img/service1-m@2x.webp");
     }
   }
 }
 
 .service__item--second {
-  background-image: url("../img/service2-d.jpg");
+  background-image: url("../img/service2-d.webp");
 
   @include vp-1024 {
-    background-image: url("../img/service2-d.jpg");
+    background-image: url("../img/service2-d.webp");
 
     @include retina {
-      background-image: url("../img/service2-d@2x.jpg");
+      background-image: url("../img/service2-d@2x.webp");
     }
   }
 
   @include vp-1023 {
-    background-image: url("../img/service2-t.jpg");
+    background-image: url("../img/service2-t.webp");
 
     @include retina {
-      background-image: url("../img/service2-t@2x.jpg");
+      background-image: url("../img/service2-t@2x.webp");
     }
   }
 
   @include vp-767 {
-    background-image: url("../img/service2-m.jpg");
+    background-image: url("../img/service2-m.webp");
 
     @include retina {
-      background-image: url("../img/service2-m@2x.jpg");
+      background-image: url("../img/service2-m@2x.webp");
     }
   }
 }
 
 .service__item--third {
-  background-image: url("../img/service3-d.jpg");
+  background-image: url("../img/service3-d.webp");
 
   @include vp-1024 {
-    background-image: url("../img/service3-d.jpg");
+    background-image: url("../img/service3-d.webp");
 
     @include retina {
-      background-image: url("../img/service3-d@2x.jpg");
+      background-image: url("../img/service3-d@2x.webp");
     }
   }
 
   @include vp-1023 {
-    background-image: url("../img/service3-t.jpg");
+    background-image: url("../img/service3-t.webp");
 
     @include retina {
-      background-image: url("../img/service3-t@2x.jpg");
+      background-image: url("../img/service3-t@2x.webp");
     }
   }
 
   @include vp-767 {
-    background-image: url("../img/service3-m.jpg");
+    background-image: url("../img/service3-m.webp");
 
     @include retina {
-      background-image: url("../img/service3-m@2x.jpg");
+      background-image: url("../img/service3-m@2x.webp");
     }
   }
 }

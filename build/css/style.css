@@ -1054,7 +1054,7 @@ button,
   opacity: 0.7;
 }
 
-.modal__button-wrap label span {
+.modal__button-wrap span {
   position: absolute;
   top: 0;
   left: 9px;
@@ -1064,7 +1064,7 @@ button,
   border-radius: 2px;
 }
 
-.modal__button-wrap label input + span::before {
+.modal__button-wrap input + span::before {
   display: none;
   position: absolute;
   content: "";
@@ -1077,15 +1077,15 @@ button,
   background-size: contain;
 }
 
-.modal__button-wrap label input:checked + span::before {
+.modal__button-wrap input:checked + span::before {
   display: block;
 }
 
-.modal__close-btn use {
+.modal__close-btn svg {
   color: #ffffff;
 }
 
-.modal__close-btn:hover use {
+.modal__close-btn:hover svg {
   color: #000000;
 }
 
@@ -1195,7 +1195,7 @@ button,
 
 .hero {
   background-color: #041827;
-  background-image: url("../img/hero-d.jpg");
+  background-image: url("../img/hero-d.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1295,22 +1295,23 @@ button,
   position: relative;
   min-height: 300px;
   border: 1px solid #ebebeb;
+  color: #00b2ff;
 }
 
 .advantages__item:hover {
   background-color: #00b2ff;
 }
 
-.advantages__item:hover .advantages__text h3,
-.advantages__item:hover .advantages__text p {
+.advantages__item:hover h3,
+.advantages__item:hover p {
   color: #f2f5f7;
 }
 
-.advantages__item:hover .advantages__text path {
-  fill: #f2f5f7;
+.advantages__item:hover svg {
+  color: #f2f5f7;
 }
 
-.advantages__text h3 {
+.advantages__item h3 {
   font-weight: 400;
   font-size: 24px;
   line-height: 34px;
@@ -1320,7 +1321,7 @@ button,
   margin-bottom: 12px;
 }
 
-.advantages__text p {
+.advantages__item p {
   margin: 0;
   font-weight: 400;
   font-size: 16px;
@@ -1343,7 +1344,7 @@ button,
   padding-bottom: 20px;
   background-repeat: no-repeat;
   background-position: left top;
-  background-image: url("../img/2022.png");
+  background-image: url("../img/2022.webp");
 }
 
 .company__content h2 {
@@ -1374,7 +1375,12 @@ button,
 }
 
 .company__button {
-  margin-top: 20px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  margin-top: 40px;
   padding: 13px 50px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
@@ -1413,11 +1419,9 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 650px;
-  grid-template-rows: 650px;
-  -webkit-column-gap: 85px;
-  -moz-column-gap: 85px;
-  column-gap: 85px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  gap: 85px;
 }
 
 .service h2 {
@@ -1443,6 +1447,7 @@ button,
 }
 
 .service__item {
+  min-height: 650px;
   position: relative;
   padding: 48px 0 0 40px;
   background-repeat: no-repeat;
@@ -1457,7 +1462,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #041827;
+  background-color: #026693;
 }
 
 .service__item:hover {
@@ -1466,15 +1471,15 @@ button,
 }
 
 .service__item--first {
-  background-image: url("../img/service1-d.jpg");
+  background-image: url("../img/service1-d.webp");
 }
 
 .service__item--second {
-  background-image: url("../img/service2-d.jpg");
+  background-image: url("../img/service2-d.webp");
 }
 
 .service__item--third {
-  background-image: url("../img/service3-d.jpg");
+  background-image: url("../img/service3-d.webp");
 }
 
 .service__button {
@@ -1543,7 +1548,7 @@ button,
   padding-left: 625px;
   background-repeat: no-repeat;
   background-position: left top 57%;
-  background-image: url("../img/paper-airplane.png");
+  background-image: url("../img/paper-airplane.webp");
 }
 
 .contact__form-wrap h2 {
@@ -1947,10 +1952,6 @@ button,
   opacity: 0.7;
 }
 
-.social__link svg use {
-  color: #041827;
-}
-
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1994,46 +1995,46 @@ button,
 
 @media (min-width: 1024px) {
   .hero {
-    background-image: url("../img/hero-d.jpg");
+    background-image: url("../img/hero-d.webp");
   }
 
   .company__content {
-    background-image: url("../img/2022.png");
+    background-image: url("../img/2022.webp");
   }
 
   .service__item--first {
-    background-image: url("../img/service1-d.jpg");
+    background-image: url("../img/service1-d.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-d.jpg");
+    background-image: url("../img/service2-d.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-d.jpg");
+    background-image: url("../img/service3-d.webp");
   }
 }
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../img/hero-d@2x.jpg");
+    background-image: url("../img/hero-d@2x.webp");
   }
 
   .company__content {
-    background-image: url("../img/2022@2x.png");
+    background-image: url("../img/2022@2x.webp");
     background-size: 150px;
   }
 
   .service__item--first {
-    background-image: url("../img/service1-d@2x.jpg");
+    background-image: url("../img/service1-d@2x.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-d@2x.jpg");
+    background-image: url("../img/service2-d@2x.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-d@2x.jpg");
+    background-image: url("../img/service3-d@2x.webp");
   }
 }
 
@@ -2080,7 +2081,7 @@ button,
   }
 
   .hero {
-    background-image: url("../img/hero-t.jpg");
+    background-image: url("../img/hero-t.webp");
   }
 
   .hero__text {
@@ -2120,13 +2121,13 @@ button,
     min-height: 360px;
   }
 
-  .advantages__text h3 {
+  .advantages__item h3 {
     margin-bottom: 10px;
     font-size: 24px;
     line-height: 32px;
   }
 
-  .advantages__text p {
+  .advantages__item p {
     max-width: 238px;
   }
 
@@ -2189,15 +2190,15 @@ button,
   }
 
   .service__item--first {
-    background-image: url("../img/service1-t.jpg");
+    background-image: url("../img/service1-t.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-t.jpg");
+    background-image: url("../img/service2-t.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-t.jpg");
+    background-image: url("../img/service3-t.webp");
   }
 
   .contact {
@@ -2315,24 +2316,24 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../img/hero-t@2x.jpg");
+    background-image: url("../img/hero-t@2x.webp");
   }
 
   .company__content {
-    background-image: url("../img/2022@2x.png");
+    background-image: url("../img/2022@2x.webp");
     background-size: 150px;
   }
 
   .service__item--first {
-    background-image: url("../img/service1-t@2x.jpg");
+    background-image: url("../img/service1-t@2x.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-t@2x.jpg");
+    background-image: url("../img/service2-t@2x.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-t@2x.jpg");
+    background-image: url("../img/service3-t@2x.webp");
   }
 }
 
@@ -2393,7 +2394,7 @@ button,
   }
 
   .hero {
-    background-image: url("../img/hero-m.jpg");
+    background-image: url("../img/hero-m.webp");
   }
 
   .hero__text {
@@ -2445,13 +2446,13 @@ button,
     min-height: 340px;
   }
 
-  .advantages__text h3 {
+  .advantages__item h3 {
     font-size: 18px;
     line-height: 30px;
     max-width: 210px;
   }
 
-  .advantages__text p {
+  .advantages__item p {
     font-size: 14px;
     line-height: 19px;
     max-width: 210px;
@@ -2508,15 +2509,15 @@ button,
   }
 
   .service__item--first {
-    background-image: url("../img/service1-m.jpg");
+    background-image: url("../img/service1-m.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-m.jpg");
+    background-image: url("../img/service2-m.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-m.jpg");
+    background-image: url("../img/service3-m.webp");
   }
 
   .service__button {
@@ -2633,19 +2634,19 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .hero {
-    background-image: url("../img/hero-m@2x.jpg");
+    background-image: url("../img/hero-m@2x.webp");
   }
 
   .service__item--first {
-    background-image: url("../img/service1-m@2x.jpg");
+    background-image: url("../img/service1-m@2x.webp");
   }
 
   .service__item--second {
-    background-image: url("../img/service2-m@2x.jpg");
+    background-image: url("../img/service2-m@2x.webp");
   }
 
   .service__item--third {
-    background-image: url("../img/service3-m@2x.jpg");
+    background-image: url("../img/service3-m@2x.webp");
   }
 }
 
