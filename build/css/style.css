@@ -1418,11 +1418,9 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 650px;
-  grid-template-rows: 650px;
-  -webkit-column-gap: 85px;
-  -moz-column-gap: 85px;
-  column-gap: 85px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  gap: 85px;
 }
 
 .service h2 {
@@ -1448,6 +1446,7 @@ button,
 }
 
 .service__item {
+  min-height: 650px;
   position: relative;
   padding: 48px 0 0 40px;
   background-repeat: no-repeat;
