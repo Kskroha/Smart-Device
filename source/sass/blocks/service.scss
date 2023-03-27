@@ -99,8 +99,6 @@
 }
 
 .service__item--first {
-  background-image: url("../img/service1-d.webp");
-
   @include vp-1024 {
     background-image: url("../img/service1-d.webp");
 
@@ -127,8 +125,6 @@
 }
 
 .service__item--second {
-  background-image: url("../img/service2-d.webp");
-
   @include vp-1024 {
     background-image: url("../img/service2-d.webp");
 
@@ -155,8 +151,6 @@
 }
 
 .service__item--third {
-  background-image: url("../img/service3-d.webp");
-
   @include vp-1024 {
     background-image: url("../img/service3-d.webp");
 
