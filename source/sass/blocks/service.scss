@@ -25,7 +25,7 @@
 
   @include vp-1023 {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(3, 1fr);
     row-gap: 30px;
     column-gap: 0;
   }
@@ -53,7 +53,6 @@
 
 .service__item h3 {
   margin: 0;
-  padding-right: 40px;
   color: $color-default-white;
   font-family: $ff-roboto-condensed;
   font-style: normal;
@@ -61,6 +60,7 @@
   font-size: 20px;
   line-height: 30px;
   max-width: 230px;
+  overflow-wrap: break-word;
 
   @include vp-1023 {
     max-width: 190px;
@@ -76,7 +76,7 @@
 .service__item {
   min-height: 650px;
   position: relative;
-  padding: 48px 0 0 40px;
+  padding: 48px 40px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -86,11 +86,11 @@
 
   @include vp-1023 {
     min-height: 250px;
-    padding: 38px 0 0 44px;
+    padding: 38px 44px;
   }
 
   @include vp-767 {
-    padding: 25px 0 0 30px;
+    padding: 25px 30px;
   }
 
   &:hover {
@@ -177,6 +177,9 @@
 }
 
 .service__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   align-self: flex-end;
   width: 60px;
   height: 60px;

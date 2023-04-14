@@ -4,6 +4,10 @@
 
   @include desktop-container;
 
+  @include vp-1439 {
+    @include desktop2-container;
+  }
+
   @include vp-1023 {
     @include tablet-container;
   }

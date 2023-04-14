@@ -102,6 +102,7 @@
   border-radius: 3px;
   background-color: transparent;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1023 {
     margin-top: 0;

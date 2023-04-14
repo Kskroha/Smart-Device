@@ -744,8 +744,9 @@ button,
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1302px;
-  padding: 0 40px;
+  max-width: 68%;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .modal {
@@ -764,7 +765,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 28, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -816,6 +817,8 @@ button,
   position: relative;
   width: 500px;
   padding: 40px;
+  padding-bottom: 40px;
+  border-radius: 3px;
 }
 
 .modal__close-btn {
@@ -862,23 +865,24 @@ button,
 
 .modal span {
   margin: 0;
-  margin-bottom: 12px;
-  margin-left: -5px;
+  margin-bottom: 15px;
+  margin-left: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
+  font-size: 30px;
+  line-height: 141%;
   color: #ffffff;
 }
 
 .modal p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   font-family: "PT Mono", "Arial", monospace;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  max-width: 380px;
 }
 
 .modal__field-wrap {
@@ -955,7 +959,7 @@ button,
 }
 
 .modal form textarea {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   width: 100%;
   padding: 23px 0 22px 15px;
   background-color: rgba(4, 20, 39, 0.15);
@@ -1014,13 +1018,14 @@ button,
 
 .modal__button {
   width: 100%;
-  padding: 12px 25px;
+  padding: 13px 60px;
   margin-bottom: 20px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1029,6 +1034,10 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .modal__button:hover {
@@ -1038,7 +1047,7 @@ button,
 
 .modal__button-wrap label {
   position: relative;
-  padding-left: 29px;
+  padding-left: 33px;
   font-family: "PT Mono", "Arial", monospace;
   font-size: 14px;
   line-height: 16px;
@@ -1089,6 +1098,14 @@ button,
   color: #000000;
 }
 
+.modal__input-wrap {
+  width: 100%;
+}
+
+.modal__input-wrap:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .header {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -1104,25 +1121,29 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .header__buttons {
+  max-width: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   gap: 30px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: 145px;
+  padding: 20px 0;
 }
 
 .header__button {
@@ -1155,6 +1176,7 @@ button,
 }
 
 .header__call-me {
+  max-width: 160px;
   text-decoration: none;
   display: block;
   background-color: rgba(255, 255, 255, 0);
@@ -1170,6 +1192,13 @@ button,
   border: 1px solid #f2f5f7;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .header__call-me:hover {
@@ -1179,7 +1208,6 @@ button,
 
 .header__logo-link {
   display: block;
-  margin-right: 160px;
 }
 
 .header__logo-link:hover {
@@ -1192,7 +1220,7 @@ button,
 }
 
 .main {
-  background-color: #f2f5f7;
+  background-color: #f8fdff;
 }
 
 .hero {
@@ -1239,6 +1267,7 @@ button,
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -1247,6 +1276,10 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .hero__button:hover {
@@ -1296,8 +1329,7 @@ button,
 }
 
 .advantages__item {
-  padding-top: 40px;
-  padding-left: 45px;
+  padding: 40px 45px;
   position: relative;
   min-height: 300px;
   border: 1px solid #ebebeb;
@@ -1400,6 +1432,10 @@ button,
   border-radius: 3px;
   background-color: transparent;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .company__button:hover {
@@ -1442,7 +1478,6 @@ button,
 
 .service__item h3 {
   margin: 0;
-  padding-right: 40px;
   color: #ffffff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
@@ -1450,12 +1485,13 @@ button,
   font-size: 20px;
   line-height: 30px;
   max-width: 230px;
+  overflow-wrap: break-word;
 }
 
 .service__item {
   min-height: 650px;
   position: relative;
-  padding: 48px 0 0 40px;
+  padding: 48px 40px;
   background-repeat: no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -1477,6 +1513,9 @@ button,
 }
 
 .service__button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
   -ms-flex-item-align: end;
   align-self: flex-end;
   width: 60px;
@@ -1521,6 +1560,18 @@ button,
 .contact .container {
   padding-left: 44px;
   padding-right: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contact__form-wrap {
+  z-index: 1000;
+  padding-left: 40px;
 }
 
 .contact::before {
@@ -1534,15 +1585,6 @@ button,
   width: 100%;
   height: 100%;
   z-index: 500;
-}
-
-.contact__form-wrap {
-  position: relative;
-  z-index: 1000;
-  padding-left: 625px;
-  background-repeat: no-repeat;
-  background-position: left top 57%;
-  background-image: url("../img/paper-airplane.webp");
 }
 
 .contact__form-wrap h2 {
@@ -1698,6 +1740,7 @@ button,
 
 .contact__button {
   width: 46%;
+  max-height: 45px;
   padding: 12px 25px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1712,6 +1755,10 @@ button,
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contact__button:hover {
@@ -1765,6 +1812,27 @@ button,
   display: block;
 }
 
+.contact__picture {
+  z-index: 1000;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 510px;
+  height: 285px;
+  background-image: url("../img/paper-airplane.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 20px right;
+}
+
+.contact__input-wrap {
+  width: 100%;
+}
+
+.input-message.is-invalid {
+  font-size: 14px;
+  color: #ffffff;
+}
+
 .footer {
   background-color: #041827;
   overflow: hidden;
@@ -1779,10 +1847,13 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .footer__logo-wrap {
-  margin-right: 167px;
+  padding-right: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1796,6 +1867,8 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .footer__logo-link {
@@ -1831,7 +1904,7 @@ button,
 }
 
 .footer__link-item {
-  min-width: 220px;
+  min-width: 205px;
   margin-bottom: 5px;
 }
 
@@ -1922,9 +1995,9 @@ button,
 }
 
 .social {
+  max-width: 150px;
   list-style-type: none;
   margin: 0;
-  padding-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1936,6 +2009,7 @@ button,
   flex-wrap: wrap;
   -ms-flex-item-align: start;
   align-self: flex-start;
+  padding-left: 0;
 }
 
 .social__link {
@@ -2032,10 +2106,23 @@ button,
   }
 }
 
+@media (max-width: 1439px) {
+  .container {
+    max-width: 89%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .footer__address-wrap {
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
-    max-width: 702px;
-    padding: 0 16px;
+    max-width: 91.5%;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   .header {
@@ -2056,7 +2143,7 @@ button,
   .header__buttons {
     margin-right: 0;
     padding-top: 5px;
-    padding-right: 20px;
+    max-width: 150px;
   }
 
   .header__button {
@@ -2162,8 +2249,8 @@ button,
   .service__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: auto;
-    grid-template-rows: auto;
+    -ms-grid-rows: (1fr)[3];
+    grid-template-rows: repeat(3, 1fr);
     row-gap: 30px;
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
@@ -2180,7 +2267,7 @@ button,
 
   .service__item {
     min-height: 250px;
-    padding: 38px 0 0 44px;
+    padding: 38px 44px;
   }
 
   .service__item--first {
@@ -2205,13 +2292,12 @@ button,
     padding-right: 16px;
   }
 
-  .contact::before {
-    display: none;
+  .contact__form-wrap {
+    padding-left: 0;
   }
 
-  .contact__form-wrap {
-    background-image: none;
-    padding-left: 0;
+  .contact::before {
+    display: none;
   }
 
   .contact__form-wrap h2 {
@@ -2243,6 +2329,10 @@ button,
     top: 17px;
   }
 
+  .contact__picture {
+    display: none;
+  }
+
   .footer__container {
     padding-top: 51px;
     padding-right: 12px;
@@ -2266,6 +2356,9 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .footer__logo-link {
@@ -2304,7 +2397,6 @@ button,
     -ms-flex-item-align: unset;
     -ms-grid-row-align: unset;
     align-self: unset;
-    padding-left: 0;
   }
 }
 
@@ -2362,8 +2454,9 @@ button,
   }
 
   .container {
-    max-width: 280px;
-    padding: 0 5px;
+    max-width: 87.5%;
+    padding-right: 5px;
+    padding-left: 5px;
   }
 
   .header__container {
@@ -2374,21 +2467,18 @@ button,
     justify-content: space-between;
   }
 
-  .header__buttons {
-    padding-right: 9px;
+  .header__button {
+    background-position: center;
   }
 
   .header__logo-link {
     margin-right: 0;
+    padding-right: 50px;
   }
 
   .header__logo {
     min-width: 35px;
     min-height: 35px;
-  }
-
-  .hero {
-    background-image: url("../img/hero-m.webp");
   }
 
   .hero__text {
@@ -2408,7 +2498,10 @@ button,
   }
 
   .hero__button {
-    padding: 12px 52px;
+    padding: 12px 20px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 14px;
     line-height: 16px;
     margin-left: 0;
@@ -2420,7 +2513,7 @@ button,
 
   .hero__button span:last-child {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
   }
 
@@ -2441,15 +2534,15 @@ button,
   }
 
   .advantages__item h3 {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 28px;
     max-width: 210px;
   }
 
   .advantages__item p {
     font-size: 14px;
     line-height: 19px;
-    max-width: 210px;
+    max-width: auto;
   }
 
   .advantages__item svg {
@@ -2499,7 +2592,7 @@ button,
   }
 
   .service__item {
-    padding: 25px 0 0 30px;
+    padding: 25px 30px;
   }
 
   .service__item--first {
@@ -2538,18 +2631,18 @@ button,
     padding-right: 0;
   }
 
-  .contact__form-wrap {
-    padding-left: 5px;
-    padding-right: 5px;
+  .contact__form-wrap form {
+    padding: 0 5px;
   }
 
   .contact__form-wrap h2 {
-    padding-left: 7px;
+    padding-left: 10px;
     font-size: 30px;
     line-height: 42px;
   }
 
   .contact__form-wrap p {
+    padding-left: 5px;
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 34px;
@@ -2577,6 +2670,7 @@ button,
   }
 
   .contact__button {
+    padding: 13px 25px;
     letter-spacing: 0.05em;
     width: 100%;
   }
@@ -2603,6 +2697,9 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .footer__nav {
@@ -2615,6 +2712,7 @@ button,
 
   .footer__address-wrap {
     padding: 0;
+    max-width: 100%;
   }
 
   .footer__address-wrap span {
@@ -2627,10 +2725,6 @@ button,
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .hero {
-    background-image: url("../img/hero-m@2x.webp");
-  }
-
   .service__item--first {
     background-image: url("../img/service1-m@2x.webp");
   }
@@ -2656,5 +2750,19 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .hero {
+    background-image: url("../img/hero-m.webp");
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 319px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 319px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 319px) and (min-resolution: 144dpi), (max-width: 319px) and (min-resolution: 1.5dppx) {
+  .hero {
+    background-image: url("../img/hero-m@2x.webp");
   }
 }

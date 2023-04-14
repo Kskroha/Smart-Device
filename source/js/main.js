@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const showMoreBtn = document.querySelector('.company__button');
   const hiddenText = document.querySelector('.company__hidden');
   const mobileHiddenText = document.querySelector('.company__mobile-hidden');
+  const forms = document.querySelectorAll('form');
 
   let isTextShown = false;
   // Utils
@@ -44,6 +45,13 @@ window.addEventListener('DOMContentLoaded', () => {
     mobileHiddenText.classList.add('company__mobile-hidden');
     showMoreBtn.textContent = 'Подробнее';
     isTextShown = !isTextShown;
+  });
+
+  forms.forEach((el) => {
+    el.addEventListener('submit', (evt) => {
+      evt.preventDefault();
+      window.form.validateForm(el);
+    });
   });
 
   window.addEventListener('load', () => {
