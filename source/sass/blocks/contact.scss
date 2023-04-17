@@ -11,13 +11,17 @@
 
   @include vp-767 {
     padding-top: 46px;
-    padding-bottom: 90px;
+    padding-bottom: 88px;
   }
 }
 
 .contact .container {
   padding-left: 44px;
   padding-right: 53px;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 50%;
+  gap: 8%;
 
   @include vp-1023 {
     padding-left: 16px;
@@ -27,6 +31,20 @@
   @include vp-767 {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.contact__form-wrap {
+  z-index: 1000;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+}
+
+.contact__form-wrap form {
+  @include vp-767 {
+    padding: 0 5px;
   }
 }
 
@@ -46,25 +64,6 @@
   }
 }
 
-.contact__form-wrap {
-  position: relative;
-  z-index: 1000;
-  padding-left: 625px;
-  background-repeat: no-repeat;
-  background-position: left top 57%;
-  background-image: url("../img/paper-airplane.webp");
-
-  @include vp-1023 {
-    background-image: none;
-    padding-left: 0;
-  }
-
-  @include vp-767 {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
 .contact__form-wrap h2 {
   margin: 0;
   margin-bottom: 12px;
@@ -81,7 +80,7 @@
   }
 
   @include vp-767 {
-    padding-left: 7px;
+    padding-left: 10px;
     font-size: 30px;
     line-height: 42px;
   }
@@ -101,6 +100,7 @@
   }
 
   @include vp-767 {
+    padding-left: 5px;
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 34px;
@@ -120,7 +120,7 @@
 
 .contact__field-wrap input {
   width: 100%;
-  padding: 15px 0 13px 15px;
+  padding: 15px 13px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -132,6 +132,10 @@
 
   &:hover {
     opacity: 0.7;
+  }
+
+  @include vp-1023 {
+    padding: 14px 16px;
   }
 }
 
@@ -145,8 +149,8 @@
 
 .contact__form-wrap form textarea {
   margin-bottom: 30px;
-  width: 100%;
-  padding: 23px 0 22px 15px;
+  width: 580px;
+  padding: 23px 22px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -157,12 +161,14 @@
   font-family: $ff-pt-mono;
 
   @include vp-1023 {
-    padding: 30px 0 14px 15px;
+    padding: 30px 15px 15px;
+    width: 100%;
+    margin-bottom: 28px;
   }
 
   @include vp-767 {
     margin-bottom: 23px;
-    padding: 24px 0 48px 15px;
+    padding: 24px 16px 47px;
   }
 
   &:hover {
@@ -194,11 +200,13 @@
 
 .contact__button {
   width: 46%;
+  max-height: 45px;
   padding: 12px 25px;
   flex-shrink: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
@@ -207,12 +215,15 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1023 {
     width: 39.5%;
+    padding: 14px 25px;
   }
 
   @include vp-767 {
+    padding: 13px 25px;
     letter-spacing: 0.05em;
     width: 100%;
   }
@@ -239,6 +250,7 @@
 
   @include vp-1023 {
     padding-top: 9px;
+    max-width: 235px;
   }
 
   @include vp-767 {
@@ -285,4 +297,41 @@
 
 .contact__button-wrap input:checked + span::before {
   display: block;
+}
+
+.contact__picture {
+  z-index: 1000;
+  width: 565px;
+  height: auto;
+  background-image: url("../img/paper-airplane.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left -11px top 72px;
+
+  @include vp-1439 {
+    background-position: center;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.input-message.is-invalid {
+  font-size: 14px;
+  color: $color-default-white;
+}
+
+.input-message.is-valid {
+  font-size: 14px;
+  color: $color-default-white;
+}
+
+.contact__input-wrap {
+  width: 275px;
+
+  @include vp-1023 {
+    flex-grow: 1;
+    width: 100%;
+  }
 }

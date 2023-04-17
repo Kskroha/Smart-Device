@@ -4,6 +4,14 @@
 
   @include desktop-container;
 
+  @include vp-1919 {
+    @include desktop-l-container;
+  }
+
+  @include vp-1439 {
+    @include desktop-m-container;
+  }
+
   @include vp-1023 {
     @include tablet-container;
   }

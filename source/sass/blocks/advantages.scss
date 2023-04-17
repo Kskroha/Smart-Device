@@ -42,8 +42,7 @@
 }
 
 .advantages__item {
-  padding-top: 40px;
-  padding-left: 45px;
+  padding: 40px 45px 30px;
   position: relative;
   min-height: 300px;
   border: 1px solid $color-whisper;
@@ -89,8 +88,8 @@
   }
 
   @include vp-767 {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 28px;
     max-width: 210px;
   }
 }
@@ -111,7 +110,7 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
-    max-width: 210px;
+    max-width: auto;
   }
 }
 

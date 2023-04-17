@@ -10,6 +10,8 @@
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="img/hero-m@2x.webp" as="image" media="(max-width: 768px)">
+  <link rel="preload" href="img/hero-m.webp" as="image" media="(max-width: 768px)">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -19,7 +21,7 @@
       <div class="container header__container">
         <a href="index.html" class="header__logo-link">
           <picture>
-            <source media="(min-width: 767px)" srcset="img/svg/logo-d.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo-d.svg">
             <img class="header__logo" src="img/svg/logo-m.svg" width="35" height="35" alt="Логотип Smart Device">
           </picture>
         </a>
@@ -203,26 +205,33 @@
       </section>
       <section class="contact">
         <div class="container">
+          <div class="contact__picture"></div>
           <div class="contact__form-wrap">
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <div class="contact__field-wrap">
-                <label class="visually-hidden" for="name">Имя</label>
-                <input tabindex="1" type="text" name="name" id="name" placeholder="Имя" required>
-                <label class="visually-hidden" for="phone">Номер телефона</label>
-                <input tabindex="1" type="tel" name="phone" id="phone" placeholder="Телефон" required>
-              </div>
-              <label class="visually-hidden" for="question">Ваш вопрос</label>
-              <textarea tabindex="1" placeholder="Ваш вопрос" rows="5" name="question" id="question"></textarea>
-              <div class="contact__button-wrap">
-                <button tabindex="3" class="contact__button" type="submit">Задать вопрос</button>
-                <label for="agree">Я&nbsp;согласен на&nbsp;обработку персональных данных
-                  <input class="visually-hidden" tabindex="2" id="agree" type="checkbox" checked>
-                  <span></span>
-                </label>
-              </div>
-            </form>
+            <div data-form-validate data-callback="base">
+              <form action="https://echo.htmlacademy.ru" method="post">
+                <div class="contact__field-wrap">
+                  <div class="contact__input-wrap" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                    <label class="visually-hidden" for="name">Имя</label>
+                    <input tabindex="1" type="text" name="name" id="name" placeholder="Имя" autocomplete="off" required>
+                  </div>
+                  <div class="contact__input-wrap" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-phone-length="18" data-required>
+                    <label class="visually-hidden" for="phone">Номер телефона</label>
+                    <input tabindex="1" type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="off">
+                  </div>
+                </div>
+                <label class="visually-hidden" for="question">Ваш вопрос</label>
+                <textarea tabindex="1" placeholder="Ваш вопрос" rows="5" name="question" id="question"></textarea>
+                <div class="contact__button-wrap">
+                  <button tabindex="3" class="contact__button" type="submit">Задать вопрос</button>
+                  <label for="agree">Я&nbsp;согласен на&nbsp;обработку персональных данных
+                    <input class="visually-hidden" tabindex="2" id="agree" type="checkbox" checked required>
+                    <span></span>
+                  </label>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -318,23 +327,29 @@
       <div class="modal__content">
         <span>Закажите звонок!</span>
         <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div class="modal__field-wrap">
-            <label class="visually-hidden" for="modal-name">Имя</label>
-            <input tabindex="4" type="text" name="name" id="modal-name" placeholder="Имя" required data-focus>
-            <label class="visually-hidden" for="modal-phone">Номер телефона</label>
-            <input tabindex="4" type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
-          </div>
-          <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
-          <textarea tabindex="4" placeholder="Ваш вопрос" rows="5" name="modal-question" id="modal-question"></textarea>
-          <div class="modal__button-wrap">
-            <button tabindex="6" class="modal__button" type="submit">Отправить</button>
-            <label for="modal-agree">Я&nbsp;согласен на&nbsp;обработку персональных данных
-              <input tabindex="5" class="visually-hidden" id="modal-agree" type="checkbox" checked>
-              <span></span>
-            </label>
-          </div>
-        </form>
+        <div data-form-validate data-callback="base">
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="modal__field-wrap">
+              <div class="modal__input-wrap" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                <label class="visually-hidden" for="modal-name">Имя</label>
+                <input tabindex="4" type="text" name="name" id="modal-name" placeholder="Имя" autocomplete="off" data-focus required>
+              </div>
+              <div class="modal__input-wrap" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-phone-length="18" data-required>
+                <label class="visually-hidden" for="modal-phone">Номер телефона</label>
+                <input tabindex="4" type="tel" name="phone" id="modal-phone" placeholder="Телефон" autocomplete="off" required>
+              </div>
+            </div>
+            <label class="visually-hidden" for="modal-question">Ваш вопрос</label>
+            <textarea tabindex="4" placeholder="Ваш вопрос" rows="5" name="modal-question" id="modal-question"></textarea>
+            <div class="modal__button-wrap">
+              <button tabindex="6" class="modal__button" type="submit">Отправить</button>
+              <label for="modal-agree">Я&nbsp;согласен на&nbsp;обработку персональных данных
+                <input tabindex="5" class="visually-hidden" id="modal-agree" type="checkbox" checked required>
+                <span></span>
+              </label>
+            </div>
+          </form>
+        </div>
         <button tabindex="6" class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап"
           data-close-modal>
           <svg width="40" height="40">

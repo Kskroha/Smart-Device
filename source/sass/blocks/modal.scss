@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: rgba(#03101c, 0.7);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -62,6 +62,8 @@
 
     width: 500px;
     padding: 40px;
+    padding-bottom: 40px;
+    border-radius: 3px;
 
     @include vp-374 {
       width: 100%;
@@ -119,23 +121,24 @@
 
 .modal span {
   margin: 0;
-  margin-bottom: 12px;
-  margin-left: -5px;
+  margin-bottom: 15px;
+  margin-left: 0;
   font-family: $ff-roboto-condensed;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 51px;
+  font-size: 30px;
+  line-height: 141%;
   color: $color-default-white;
 }
 
 .modal p {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   font-family: $ff-pt-mono;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: $color-default-white;
+  max-width: 380px;
 }
 
 .modal__field-wrap {
@@ -175,7 +178,7 @@
 }
 
 .modal form textarea {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   width: 100%;
   padding: 23px 0 22px 15px;
   background-color: rgba(4, 20, 39, 0.15);
@@ -202,12 +205,13 @@
 
 .modal__button {
   width: 100%;
-  padding: 12px 25px;
+  padding: 13px 60px;
   margin-bottom: 20px;
   flex-shrink: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   font-family: $ff-roboto-condensed;
@@ -216,6 +220,7 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     color: $color-default-black;
@@ -225,7 +230,7 @@
 
 .modal__button-wrap label {
   position: relative;
-  padding-left: 29px;
+  padding-left: 33px;
   font-family: $ff-pt-mono;
   font-size: 14px;
   line-height: 16px;
@@ -274,4 +279,12 @@
 
 .modal__close-btn:hover svg {
   color: $color-default-black;
+}
+
+.modal__input-wrap {
+  width: 100%;
+}
+
+.modal__input-wrap:not(:last-child) {
+  margin-bottom: 20px;
 }

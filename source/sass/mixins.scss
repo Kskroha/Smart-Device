@@ -1,16 +1,31 @@
 @mixin desktop-container {
-  max-width: calc(1222px + 80px);
-  padding: 0 40px;
+  max-width: 68%;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@mixin desktop-l-container {
+  max-width: 78%;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+@mixin desktop-m-container {
+  max-width: 89%;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 @mixin tablet-container {
-  max-width: calc(670px + 32px);
-  padding: 0 16px;
+  max-width: 91.5%;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 @mixin mobile-container {
-  max-width: calc(270px + 10px);
-  padding: 0 5px;
+  max-width: 87.5%;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 @mixin retina {
@@ -90,7 +105,7 @@
 }
 
 @mixin vp-374 {
-  @media (max-width: ($vp-320 - 1px)) {
+  @media (max-width: ($vp-375 - 1px)) {
     @content;
   }
 }
