@@ -1116,7 +1116,7 @@ button,
 }
 
 .header__container {
-  padding-top: 28px;
+  padding-top: 30px;
   padding-bottom: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1130,7 +1130,7 @@ button,
 }
 
 .header__buttons {
-  max-width: 480px;
+  max-width: 520px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1143,7 +1143,10 @@ button,
   gap: 30px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 15px 20px;
+  -webkit-transform: translateX(-23px);
+  -ms-transform: translateX(-23px);
+  transform: translateX(-23px);
 }
 
 .header__button {
@@ -1176,6 +1179,9 @@ button,
 }
 
 .header__call-me {
+  -webkit-transform: translate(-64px, -2px);
+  -ms-transform: translate(-64px, -2px);
+  transform: translate(-64px, -2px);
   max-width: 160px;
   text-decoration: none;
   display: block;
@@ -1329,7 +1335,7 @@ button,
 }
 
 .advantages__item {
-  padding: 40px 45px;
+  padding: 40px 45px 30px;
   position: relative;
   min-height: 300px;
   border: 1px solid #ebebeb;
@@ -1484,7 +1490,7 @@ button,
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  max-width: 230px;
+  max-width: 193px;
   overflow-wrap: break-word;
 }
 
@@ -1563,15 +1569,16 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
   gap: 8%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .contact__form-wrap {
   z-index: 1000;
-  padding-left: 40px;
 }
 
 .contact::before {
@@ -1618,7 +1625,7 @@ button,
 
 .contact__field-wrap input {
   width: 100%;
-  padding: 15px 0 13px 15px;
+  padding: 15px 13px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -1675,8 +1682,8 @@ button,
 
 .contact__form-wrap form textarea {
   margin-bottom: 30px;
-  width: 100%;
-  padding: 23px 0 22px 15px;
+  width: 580px;
+  padding: 23px 22px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -1747,6 +1754,7 @@ button,
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
+  letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1814,23 +1822,26 @@ button,
 
 .contact__picture {
   z-index: 1000;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  width: 510px;
-  height: 285px;
-  background-image: url("../img/paper-airplane.png");
+  width: 565px;
+  height: auto;
+  background-image: url("../img/paper-airplane.webp");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: top 20px right;
-}
-
-.contact__input-wrap {
-  width: 100%;
+  background-position: left -11px top 72px;
 }
 
 .input-message.is-invalid {
   font-size: 14px;
   color: #ffffff;
+}
+
+.input-message.is-valid {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.contact__input-wrap {
+  width: 275px;
 }
 
 .footer {
@@ -1839,7 +1850,7 @@ button,
 }
 
 .footer__container {
-  padding-top: 50px;
+  padding-top: 52px;
   padding-bottom: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1877,6 +1888,9 @@ button,
 }
 
 .footer__nav {
+  -webkit-transform: translateX(-16px);
+  -ms-transform: translateX(-16px);
+  transform: translateX(-16px);
   padding-top: 6px;
 }
 
@@ -1906,6 +1920,7 @@ button,
 .footer__link-item {
   min-width: 205px;
   margin-bottom: 5px;
+  max-width: 220px;
 }
 
 .footer__link {
@@ -1995,6 +2010,9 @@ button,
 }
 
 .social {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
   max-width: 150px;
   list-style-type: none;
   margin: 0;
@@ -2106,11 +2124,39 @@ button,
   }
 }
 
+@media (max-width: 1919px) {
+  .container {
+    max-width: 78%;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
 @media (max-width: 1439px) {
   .container {
     max-width: 89%;
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .header__buttons {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .header__button {
+    min-width: 170px;
+  }
+
+  .header__call-me {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
+  .contact__picture {
+    background-position: center;
   }
 
   .footer__address-wrap {
@@ -2262,7 +2308,7 @@ button,
   }
 
   .service__item h3 {
-    max-width: 190px;
+    max-width: 150px;
   }
 
   .service__item {
@@ -2293,7 +2339,7 @@ button,
   }
 
   .contact__form-wrap {
-    padding-left: 0;
+    width: 100%;
   }
 
   .contact::before {
@@ -2309,8 +2355,14 @@ button,
     margin-bottom: 25px;
   }
 
+  .contact__field-wrap input {
+    padding: 14px 16px;
+  }
+
   .contact__form-wrap form textarea {
-    padding: 30px 0 14px 15px;
+    padding: 30px 15px 15px;
+    width: 100%;
+    margin-bottom: 28px;
   }
 
   .contact__button-wrap {
@@ -2319,10 +2371,12 @@ button,
 
   .contact__button {
     width: 39.5%;
+    padding: 14px 25px;
   }
 
   .contact__button-wrap label {
     padding-top: 9px;
+    max-width: 235px;
   }
 
   .contact__button-wrap span {
@@ -2333,8 +2387,15 @@ button,
     display: none;
   }
 
+  .contact__input-wrap {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    width: 100%;
+  }
+
   .footer__container {
-    padding-top: 51px;
+    padding-top: 50px;
     padding-right: 12px;
     padding-bottom: 90px;
     display: -ms-grid;
@@ -2344,6 +2405,7 @@ button,
   }
 
   .footer__logo-wrap {
+    padding-right: 0;
     margin-bottom: 31px;
     margin-right: 0;
     -ms-grid-column: 1;
@@ -2365,13 +2427,18 @@ button,
     margin-bottom: 0;
   }
 
+  .footer__nav {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+
   .footer__links {
     margin-right: 0;
   }
 
   .footer__link-item {
     margin-bottom: 6px;
-    max-width: 220px;
   }
 
   .footer__link-item:last-child {
@@ -2394,9 +2461,12 @@ button,
   }
 
   .social {
-    -ms-flex-item-align: unset;
-    -ms-grid-row-align: unset;
-    align-self: unset;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 }
 
@@ -2469,11 +2539,6 @@ button,
 
   .header__button {
     background-position: center;
-  }
-
-  .header__logo-link {
-    margin-right: 0;
-    padding-right: 50px;
   }
 
   .header__logo {
@@ -2588,7 +2653,7 @@ button,
   .service__item h3 {
     font-size: 18px;
     line-height: 30px;
-    max-width: 175px;
+    max-width: 135px;
   }
 
   .service__item {
@@ -2623,7 +2688,7 @@ button,
 
   .contact {
     padding-top: 46px;
-    padding-bottom: 90px;
+    padding-bottom: 88px;
   }
 
   .contact .container {
@@ -2658,7 +2723,7 @@ button,
 
   .contact__form-wrap form textarea {
     margin-bottom: 23px;
-    padding: 24px 0 48px 15px;
+    padding: 24px 16px 47px;
   }
 
   .contact__button-wrap {
@@ -2738,7 +2803,7 @@ button,
   }
 }
 
-@media (max-width: 319px) {
+@media (max-width: 374px) {
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -2761,7 +2826,7 @@ button,
   }
 }
 
-@media (max-width: 319px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 319px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 319px) and (min-resolution: 144dpi), (max-width: 319px) and (min-resolution: 1.5dppx) {
+@media (max-width: 374px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 374px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 374px) and (min-resolution: 144dpi), (max-width: 374px) and (min-resolution: 1.5dppx) {
   .hero {
     background-image: url("../img/hero-m@2x.webp");
   }

@@ -59,17 +59,17 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  max-width: 230px;
+  max-width: 193px;
   overflow-wrap: break-word;
 
   @include vp-1023 {
-    max-width: 190px;
+    max-width: 150px;
   }
 
   @include vp-767 {
     font-size: 18px;
     line-height: 30px;
-    max-width: 175px;
+    max-width: 135px;
   }
 }
 

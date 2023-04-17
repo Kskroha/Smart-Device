@@ -10,7 +10,7 @@
 }
 
 .header__container {
-  padding-top: 28px;
+  padding-top: 30px;
   padding-bottom: 35px;
   display: flex;
   align-items: flex-start;
@@ -31,13 +31,18 @@
 }
 
 .header__buttons {
-  max-width: 480px;
+  max-width: 520px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 15px 20px;
+  transform: translateX(-23px);
+
+  @include vp-1439 {
+    transform: none;
+  }
 
   @include vp-1023 {
     margin-right: 0;
@@ -61,6 +66,10 @@
   line-height: 18px;
   color: $color-alice-blue;
   cursor: pointer;
+
+  @include vp-1439 {
+    min-width: 170px;
+  }
 
   @include vp-1023 {
     min-width: auto;
@@ -87,6 +96,7 @@
 }
 
 .header__call-me {
+  transform: translate(-64px, -2px);
   max-width: 160px;
   text-decoration: none;
   display: block;
@@ -106,6 +116,10 @@
   user-select: none;
   align-self: center;
 
+  @include vp-1439 {
+    transform: none;
+  }
+
   @include vp-1023 {
     display: none;
   }
@@ -124,11 +138,6 @@
 
 .header__logo-link {
   display: block;
-
-  @include vp-767 {
-    margin-right: 0;
-    padding-right: 50px;
-  }
 
   &:hover {
     opacity: 0.7;

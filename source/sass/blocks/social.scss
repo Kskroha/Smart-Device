@@ -1,4 +1,5 @@
 .social {
+  transform: translateX(13px);
   max-width: 150px;
   list-style-type: none;
   margin: 0;
@@ -10,7 +11,8 @@
   padding-left: 0;
 
   @include vp-1023 {
-    align-self: unset;
+    transform: none;
+    align-self: center;
   }
 }
 
