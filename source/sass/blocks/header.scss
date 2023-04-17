@@ -96,7 +96,7 @@
 }
 
 .header__call-me {
-  transform: translate(-64px, -2px);
+  transform: translate(-64px, 6px);
   max-width: 160px;
   text-decoration: none;
   display: block;
@@ -114,7 +114,6 @@
   border-radius: 3px;
   cursor: pointer;
   user-select: none;
-  align-self: center;
 
   @include vp-1439 {
     transform: none;
