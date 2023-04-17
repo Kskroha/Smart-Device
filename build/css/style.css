@@ -741,6 +741,18 @@ button,
   outline: none;
 }
 
+.input-message.is-invalid {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.input-message.is-valid {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -1179,9 +1191,9 @@ button,
 }
 
 .header__call-me {
-  -webkit-transform: translate(-64px, -2px);
-  -ms-transform: translate(-64px, -2px);
-  transform: translate(-64px, -2px);
+  -webkit-transform: translate(-64px, 6px);
+  -ms-transform: translate(-64px, 6px);
+  transform: translate(-64px, 6px);
   max-width: 160px;
   text-decoration: none;
   display: block;
@@ -1202,9 +1214,6 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
 }
 
 .header__call-me:hover {
@@ -1682,7 +1691,7 @@ button,
 
 .contact__form-wrap form textarea {
   margin-bottom: 30px;
-  width: 580px;
+  width: 100%;
   padding: 23px 22px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
@@ -1830,18 +1839,8 @@ button,
   background-position: left -11px top 72px;
 }
 
-.input-message.is-invalid {
-  font-size: 14px;
-  color: #ffffff;
-}
-
-.input-message.is-valid {
-  font-size: 14px;
-  color: #ffffff;
-}
-
 .contact__input-wrap {
-  width: 275px;
+  width: 100%;
 }
 
 .footer {
@@ -2134,7 +2133,7 @@ button,
 
 @media (max-width: 1439px) {
   .container {
-    max-width: 89%;
+    max-width: 95%;
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -2153,6 +2152,17 @@ button,
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+  }
+
+  .contact .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 5%;
+  }
+
+  .contact::before {
+    -webkit-clip-path: polygon(43.6% 0, 0 0, 0 100%);
+    clip-path: polygon(43.6% 0, 0 0, 0 100%);
   }
 
   .contact__picture {
