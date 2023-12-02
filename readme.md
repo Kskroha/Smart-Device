@@ -1,4 +1,7 @@
-[Ссылка на проект](https://kskroha.github.io/Smart-Device/build)
+# Smart Device
+Резиновая верстка макета. Выполнена в ходе обучения в Htmlacademy. 
+
+[Демонстрация проекта](https://kskroha.github.io/Smart-Device/build)
 
 ## Краткая инструкция по работе
 Для начала работы у вас должент быть установлен **Node.js**
